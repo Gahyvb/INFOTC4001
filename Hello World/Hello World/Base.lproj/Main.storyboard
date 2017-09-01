@@ -17,20 +17,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stc-YH-aR6">
-                                <rect key="frame" x="133" y="302" width="84" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Hello World!"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltM-0N-q3I">
-                                <rect key="frame" x="157" y="348" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltM-0N-q3I">
+                                <rect key="frame" x="169.5" y="111" width="36" height="30"/>
                                 <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="Clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tuV-BV-ceU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQt-aU-UaC">
+                                <rect key="frame" x="149.5" y="40" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stc-YH-aR6">
+                                <rect key="frame" x="170" y="71" width="35" height="30"/>
+                                <state key="normal" title="Hello"/>
+                                <connections>
+                                    <action selector="helloClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ceX-kV-e1a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Stc-YH-aR6" firstAttribute="top" secondItem="HQt-aU-UaC" secondAttribute="bottom" constant="10" id="AlW-q9-bfQ"/>
+                            <constraint firstItem="ltM-0N-q3I" firstAttribute="centerX" secondItem="Stc-YH-aR6" secondAttribute="centerX" id="BaY-qN-0en"/>
+                            <constraint firstItem="ltM-0N-q3I" firstAttribute="top" secondItem="Stc-YH-aR6" secondAttribute="bottom" constant="10" id="GyL-Ys-pEN"/>
+                            <constraint firstItem="Stc-YH-aR6" firstAttribute="centerX" secondItem="HQt-aU-UaC" secondAttribute="centerX" id="Kmy-TE-Uhw"/>
+                            <constraint firstItem="HQt-aU-UaC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="m59-MC-s57"/>
+                            <constraint firstItem="HQt-aU-UaC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zjm-hg-zak"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="clear" destination="ltM-0N-q3I" id="Toy-GW-rn2"/>
+                        <outlet property="hello" destination="Stc-YH-aR6" id="jnS-ZO-epR"/>
+                        <outlet property="label" destination="HQt-aU-UaC" id="vGa-05-vKe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
